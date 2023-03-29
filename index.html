@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+
+    <title>Escape Game</title>
+</head>
+<body>
+    <form>
+        <label for="word">Entrez le code</label>
+        <input type="text" id="word" name="word"  autocomplete="off">
+        <button type="button" onclick="checkWord()">Valider</button>
+    </form>
+    <script>
+        function checkWord(){
+            var guessedWord = document.getElementById("word").value;
+            var correctWord = "moncode";
+            if (guessedWord === correctWord){
+                window.location.href = "bravo.html";
+            }else{
+                alert("MAUVAIS CODE");
+            }
+        }
+    </script>
+</body>
+</html>
